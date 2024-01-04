@@ -1,0 +1,31 @@
+{% extends "moominmugs/base.html" %}
+
+{% block content %}
+	<h1>Moominmug {{ object.name }}</h1>
+	<table><tbody>
+		<tr>
+			<td><b>Name</b></td>
+			<td>{{ object.name }}<td>
+		</tr>
+		<tr>
+			<td><b>Official name</b></td>
+			<td>{{ object.officialName }}<td>
+		</tr>
+		<tr>
+			<td><b>Image</b></td>
+			<tr><img src="{{ object.image }}" width=200></tr>
+		</tr>
+		<tr>
+			<td><b>Count</b></td>
+			<td>{{ object.count }}<td>
+		</tr>
+		<tr>
+			<td><b>Figure</b></td>
+			<td>{{ object.figure }}<td>
+		</tr>
+				<tr>
+			<td><b>Theme</b></td>
+			<td>{{ object.theme }}<td>
+		</tr>
+	</tbody></table>
+{% endblock content %}

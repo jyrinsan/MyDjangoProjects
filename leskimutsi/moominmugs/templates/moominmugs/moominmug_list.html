@@ -1,0 +1,14 @@
+{% extends "moominmugs/base.html" %}
+
+{% block content %}
+	<h1>My moominmugs</h1>
+
+	{% for mug in object_list %}
+		<p>
+			<a href="{{ mug.get_absolute_url }}">{{ mug.name }}</a>
+			- <a href="{{ mug.get_absolute_url }}/update">Edit</a>
+			<a href="{{ mug.get_absolute_url }}/delete">Delete</a>
+		</p>
+	{% endfor %}
+	<a href="/moominmugs/new">Add new moomin mug</a>
+{% endblock content %}
